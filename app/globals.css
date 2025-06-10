@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f7f2e9; /* A soft, temple-like beige */
+  color: #4a2c2a; /* A deep brown for text */
+}
