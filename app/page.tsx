@@ -53,7 +53,11 @@ export default function Home() {
   };
 
   const startListening = () => {
-    SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+    if (listening) {
+      SpeechRecognition.stopListening();
+    } else {
+      SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+    }
   };
   
   const videoOptions = {
