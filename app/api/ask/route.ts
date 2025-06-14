@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: "Question is required." }, { status: 400 });
         }
 
-        // This is the line we changed to the correct model name
+        // Use the Gemini-Pro model for text generation
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
         const prompt = `You are an expert guide on Lord Jagannath, Hinduism, and Puri culture. A user has asked: "${question}".
