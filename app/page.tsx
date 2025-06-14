@@ -42,7 +42,7 @@ export default function Home() {
     window.speechSynthesis.cancel();
 
     try {
-      const result = await axios.post('/api/ask', { question: query });
+      const result = await axios.post('https://jagannath-ai-proxy-gules.vercel.app/api/ask', { question: query });
       setResponse(result.data);
     } catch (error) {
       console.error('Error fetching response:', error);
